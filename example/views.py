@@ -5,7 +5,7 @@ from datetime import datetime
 from django.shortcuts import render, redirect
 
 
-def index(request):
+def login(request):
     # now = datetime.now()
     # html = f'''
     # <html>
@@ -15,4 +15,6 @@ def index(request):
     #     </body>
     # </html>
     # '''
-    return render(request, 'index.html')
+    return render(request, 'login.html')
+def signup(request):
+    return render(request, 'signup.html')
