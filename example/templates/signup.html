@@ -1,116 +1,250 @@
+{%load static %}
 <!DOCTYPE html>
 <html>
-<style>
-    body {
-        font-family: Arial, Helvetica, sans-serif;
-    }
 
-    * {
-        box-sizing: border-box
-    }
+<head>
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Site Metas -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
 
-    /* Full-width input fields */
-    input[type=text],
-    input[type=password] {
-        width: 100%;
-        padding: 15px;
-        margin: 5px 0 22px 0;
-        display: inline-block;
-        border: none;
-        background: #f1f1f1;
-    }
+    <title>Aikido</title>
 
-    input[type=text]:focus,
-    input[type=password]:focus {
-        background-color: #ddd;
-        outline: none;
-    }
+    <!-- slider stylesheet -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
 
-    hr {
-        border: 1px solid #f1f1f1;
-        margin-bottom: 25px;
-    }
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
 
-    /* Set a style for all buttons */
-    button {
-        background-color: #04AA6D;
-        color: white;
-        padding: 14px 20px;
-        margin: 8px 0;
-        border: none;
-        cursor: pointer;
-        width: 100%;
-        opacity: 0.9;
-    }
-
-    button:hover {
-        opacity: 1;
-    }
-
-    /* Extra styles for the cancel button */
-    .cancelbtn {
-        padding: 14px 20px;
-        background-color: #f44336;
-    }
-
-    /* Float cancel and signup buttons and add an equal width */
-    .cancelbtn,
-    .signupbtn {
-        float: left;
-        width: 50%;
-    }
-
-    /* Add padding to container elements */
-    .container {
-        padding: 16px;
-    }
-
-    /* Clear floats */
-    .clearfix::after {
-        content: "";
-        clear: both;
-        display: table;
-    }
-
-    /* Change styles for cancel button and signup button on extra small screens */
-    @media screen and (max-width: 300px) {
-
-        .cancelbtn,
-        .signupbtn {
-            width: 100%;
-        }
-    }
-</style>
+    <!-- fonts style -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+    <!-- responsive style -->
+    <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
+</head>
 
 <body>
+    <div class="hero_area">
+        <!-- header section strats -->
+        <header class="header_section">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg custom_nav-container ">
+                    <a class="navbar-brand" href="">
+                        <span>
+                            Aikido
+                        </span>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-    <form action="/action_page.php" style="border:1px solid #ccc">
-        <div class="container">
-            <h1>Бүртгүүлэх хэсэг</h1>
-            <p>Бүртгэл үүсгэхийн тулд энэ маягтыг бөглөнө үү.</p>
-            <hr>
-
-            <label for="email"><b>Имэйл</b></label>
-            <input type="text" placeholder="Имэйл" name="email" required>
-
-            <label for="psw"><b>Нууц үг</b></label>
-            <input type="password" placeholder="Нууц үг" name="psw" required>
-
-            <label for="psw-repeat"><b>Нууц үгээ давтана уу</b></label>
-            <input type="password" placeholder="Нууц үгээ давтана уу" name="psw-repeat" required>
-            <!-- 
-            <label>
-                <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-            </label> -->
-
-            <!-- <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p> -->
-
-            <div class="clearfix">
-                <button type="button" class="cancelbtn"><a href="login">Цуцлах</a></button>
-                <button type="submit" class="signupbtn">Бүртгүүлэх</button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+                            <ul class="navbar-nav  ">
+                                <li class="nav-item ">
+                                    <a class="nav-link" href="/">Нүүр <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item ">
+                                    <a class="nav-link" href="why.html"> Бидэнтэй нэгдээрэй </a>
+                                </li>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="trainer.html"> Сургалт</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="contact.html"> Холбоо барих</a>
+                                </li>
+                            </ul>
+                            <div class="user_option">
+                                <button class="btn  my-2 my-sm-0 nav_search-btn"
+                                    onclick="document.getElementById('id01').style.display='block'"
+                                    style="width:auto;">..... </button>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
             </div>
-        </div>
-    </form>
+        </header>
+        <!-- end header section -->
+        <!-- contact section -->
+
+        <section class="contact_section ">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6 px-0">
+                        <div class="img-box">
+                            <img src="{% static 'images/akido.jpg' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-6">
+                        <div class="form_container pr-0 pr-lg-5 mr-0 mr-lg-2">
+                            <div class="heading_container">
+                                <h2>
+                                    Бүртгүүлэх
+                                </h2>
+                            </div>
+                            <form action="">
+                                <div>
+                                    <input type="text" placeholder="Нэр" required />
+                                </div>
+                                <div>
+                                    <input type="text" placeholder="Утасны дугаар" required />
+                                </div>
+                                <div>
+                                    <input type="email" placeholder="Имэйл" required />
+                                </div>
+                                <input type="password" placeholder="Нууц үг" name="psw" required>
+                                <input type="password" placeholder="Нууц үгээ давтана уу" name="psw-repeat" required>
+
+
+                                <button class="button">
+                                    Бүртгүүлэх
+                                </button>
+                                <button type="submit"><a href="/">Цуцлах</a>
+
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- end contact section -->
+
+        <!-- info section -->
+        <section class="info_section layout_padding2">
+            <div class="container">
+                <div class="info_items">
+                    <a href="">
+                        <div class="item ">
+                            <div class="img-box box-1">
+                                <img src="" alt="">
+                            </div>
+                            <div class="detail-box">
+                                <p>
+                                    Байршил
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="item ">
+                            <div class="img-box box-2">
+                                <img src="" alt="">
+                            </div>
+                            <div class="detail-box">
+                                <p>
+                                    80100560
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="item ">
+                            <div class="img-box box-3">
+                                <img src="" alt="">
+                            </div>
+                            <div class="detail-box">
+                                <p>
+                                    o.bayarjargal10@gmail.com
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- end info_section -->
+    </div>
+
+
+
+
+
+
+
+
+    <!-- footer section -->
+    <footer class="container-fluid footer_section">
+        <p>
+            &copy; 2023 All Rights Reserved. Design by
+            <a href="https://resume-theta-tan.vercel.app/">Bayarjargal</a>
+        </p>
+    </footer>
+    <!-- footer section -->
+
+    <!-- modal-->
+
+
+    <div id="id01" class="modal">
+
+        <form class="modal-content animate" action="/action_page.php" method="post">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                    title="Close Modal">&times;</span>
+                <img src="{% static 'images/contact-img.jpg' %}" alt="Avatar" class="avatar">
+            </div>
+
+            <div class="container">
+                <label for="uname"><b>Хэрэглэгчийн нэр</b></label>
+                <input type="text" placeholder="Хэрэглэгчийн нэр" name="uname" required>
+
+                <label for="psw"><b>Нууц үг</b></label>
+                <input type="password" placeholder="Нууц үг" name="psw" required>
+
+                <button type="submit">Нэвтрэх</button>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Сануулах
+                </label>
+                <span class="psw">Бүртгэлгүй бол <a href="signup.html">энд дарна уу</a></span>
+            </div>
+
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                    class="cancelbtn">Цуцлах</button>
+                <span class="psw">Нууц үгээ мартсан уу? <a href="#">энд дарна уу</a></span>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+
+
+    <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 
 </body>
 
